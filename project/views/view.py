@@ -1,5 +1,5 @@
 def nomeSenha(nome, senha):
     if nome == "Jean Lukas" and senha == "1234":
-        return "Olá Jean Lukas"
+        return f"Olá {nome}"
     return "Nome ou Senha incorreto!"
 
