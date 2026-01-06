@@ -24,5 +24,6 @@ def iniciar_menu():
         elif opcao == 2:
             print("Saindo...")
             break
+        
         else:
             print("Opção inválida")
