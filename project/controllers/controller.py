@@ -1,6 +1,14 @@
+from models.model import Usuario
+from dals.dal import CadastroDal
 
-from views.view import nomeSenha
+class VerificarCadastroController:
+    @classmethod
+    def cadastrar(cls, nome: str, senha: str):
+        if len(nome) < 3:
+            return False, "Nome deve ter no mínimo 3 caracteres"
+        if len(senha) < 5:
+            return False, "Senha deve ter no mínimo 5 caracteres"
 
-def entrar1(nome, senha):
-    return nomeSenha(nome, senha)
-
+        usuario = Usuario(nome, senha)
+        CadastroDal.salvar_usuario(usuario)
+        return True, "Usuário cadastrado com sucesso"

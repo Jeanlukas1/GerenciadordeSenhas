@@ -1,6 +1,4 @@
 class Usuario:
-    def __init__(self, nome, senha):
+    def __init__(self, nome: str, senha: str):
         self.nome = nome
         self.senha = senha
-    
-usr1 = Usuario("Jean Lukas", "1234")
